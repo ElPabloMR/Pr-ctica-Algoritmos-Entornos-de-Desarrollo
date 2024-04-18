@@ -8,17 +8,15 @@ public abstract class Algoritmo {
  * 
  */
 	public static int fibonacci(int numero) {
-		int serie=numero;
-		int num1=0;
-		int num2=1;
-		int suma=1;
-		for (int i=0;i<serie;i++) {
-			suma=num1+num2;
-			num1=num2;
-			num2=suma;
+		if(numero==0) {
+			return numero;
 		}
-		numero=suma;
-		return numero;
+		if(numero==1) {
+			return numero;
+		}
+		else {
+			return fibonacci(numero-1)+fibonacci(numero-2);
+		}
 		
 	}
 /**
@@ -39,7 +37,35 @@ public abstract class Algoritmo {
  * devolvera un true o false si es primo o no
  * @return si es primo o no
  */
-	public static void primo(int numero) {
-		
+	public static boolean primo(int numero) {
+		boolean res=true;
+		if(numero==2) {
+			res=true;
+		}
+		else if(numero==3) {
+			res=true;
+		}
+		else if(numero==5) {
+			res=true;
+		}
+		else if(numero%2==0) {
+			res= false;
+		}
+		else if(numero%3==0) {
+			res= false;
+		}
+		else if(numero%5==0) {
+			res= false;
+		}
+		else if(numero%2!=0) {
+			res= true;
+		}
+		else if(numero%3!=0) {
+			res= true;
+		}
+		else if(numero%5!=0) {
+			res= true;
+		}
+		return res;
 	}
 }
