@@ -14,7 +14,7 @@ public abstract class Algoritmo {
 		int suma=1;
 		for (int i=0;i<serie;i++) {
 			suma=num1+num2;
-			num1=num2
+			num1=num2;
 			num2=suma;
 		}
 		numero=suma;
@@ -28,7 +28,7 @@ public abstract class Algoritmo {
  */
 	public static int factorial(int numero) {
 		int num1=numero;
-		for (int i=1;i<=numero;i++) {
+		for (int i=1;i<numero;i++) {
 			num1=num1*i;
 		}
 		numero=num1;
